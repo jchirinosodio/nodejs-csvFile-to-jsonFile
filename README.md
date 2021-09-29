@@ -1,28 +1,44 @@
-INSTRUCTIONS
+INSTRUCTIONS:
+
+You can either use .txt or .csv files
 
 -> Most of the code its very well documented, so read commets found inside of app.js
 
 *--- IMPORTANT ----* 
+CHANGE  .import_data/rawData.csv
+Inside app.js if you change the name of the file you are adding you will need to modify line: 
 
-For each file you want to convert from csv or txt to json, it is needed to specify the columns manually and the name of those, since it is important to have a consistent json naming convention on every property
+line 74:   var textFile = fs.readFileSync('./import_data/rawData.csv', 'utf8');
 
-For example, for the given PADRON_ELECTORAL.txt: 
+So it makes sense to whatever name of your file(remember it can either be txt or csv file)
 
 
-it starts with the following lines: 
+*--- IMPORTANT ----* 
+Make sure each file you are converting, has column names in it, some csv come without column names, so you need to manually add those, in order for this app to build
+a json object name on each property.
 
-100339724,109007,,20231119,00000,JOSE                          ,DELGADO                   ,CORRALES                  
-100842598,108001,,20261024,00000,CARMEN                        ,CORRALES                  ,MORALES                   
-100842638,301027,,20200731,00000,RAFAEL                        ,AGUERO                    ,MORA                
+For example, for the given example.txt: 
 
-You need to manually create the columns for each of the columns you might want to, i.e:
+if your csv/txt file  starts like this:  
 
---> cedula, codelec,   relleno,   vencimiento,   relleno2,          nombre,       apellido1,   apellido2
-    100339724,109007,,20231119,00000,JOSE                          ,DELGADO                   ,CORRALES                  
-    100842598,108001,,20261024,00000,CARMEN                        ,CORRALES                  ,MORALES                   
-    100842638,301027,,20200731,00000,RAFAEL                        ,AGUERO                    ,MORA                
+Luis, 1230, cr, san jose
+Maria, 1230, usa, texas
+Pedro, 1230, cr, san jose
 
-so it will generate a json file like where each item of the array goes as follow: 
+You would need to manually create the column names, i.e in this scenario it could look like this:
 
-{"cedula":"901160320","codelec":"203008","relleno":"","vencimiento":"20300204","relleno2":"00000","nombre":"CHRISTOPHER BRYAN""apellido1":"ROQUE","apellido2":"ARAYA"}
+name, phoneNumber, countryCode, region
+Luis, 1230, cr, san jose
+Maria, 1230, usa, texas
+Pedro, 1230, cr, san jose
 
+As you can see the first line of csv/text file, we added the column names, also make sure it makes sense since this would be the key-value pair for each value.
+[
+    {"name":"Luis"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"},
+    {"name":"Maria"," phoneNumber":" 1230"," countryCode":" usa"," region":" texas"},
+    {"name":"Pedro"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"}
+]
+
+HOW TO RUN: 
+
+node app.js 
