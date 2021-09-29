@@ -1,0 +1,4 @@
+cedula,codelec,relleno,vencimiento,relleno2,nombre,apellido1,apellido2
+100339724,109007,,20231119,00000,JOSE                          ,DELGADO                   ,CORRALES                  
+100842598,108001,,20261024,00000,CARMEN                        ,CORRALES                  ,MORALES                   
+100842638,301027,,20200731,00000,RAFAEL                        ,AGUERO                    ,MORA                      
