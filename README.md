@@ -40,11 +40,14 @@ Pedro, 1230, cr, san jose
 As you can see the first line of csv/text file, we added the column names, also make sure it makes sense since this would be the key-value pair for each value.
 
 
-[{"name":"Luis"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"},
+[
+    {"name":"Luis"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"},
 
     {"name":"Maria"," phoneNumber":" 1230"," countryCode":" usa"," region":" texas"},
 
-    {"name":"Pedro"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"}]
+    {"name":"Pedro"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"}
+]
+
 
 
 
