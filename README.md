@@ -41,11 +41,13 @@ As you can see the first line of csv/text file, we added the column names, also 
 
 
 [
+
     {"name":"Luis"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"},
 
     {"name":"Maria"," phoneNumber":" 1230"," countryCode":" usa"," region":" texas"},
 
     {"name":"Pedro"," phoneNumber":" 1230"," countryCode":" cr"," region":" san jose"}
+    
 ]
 
 
